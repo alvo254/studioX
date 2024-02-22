@@ -1,12 +1,15 @@
 data "template_file" "user_data" {
     template = file("${path.module}/task.sh")
+    vars = {
+      efs_file_system_id = var.efs_file_system_id
+    }
 }
 resource "aws_instance" "studioX" {
     ami = "ami-053b0d53c279acc90"
     instance_type = "t2.micro"
   
     subnet_id = var.subnet
-    key_name = "${aws_key_pair.deployer.key_name}"
+    key_name = "${aws_key_pair.studiox.key_name }"
 
     user_data = data.template_file.user_data.rendered
     # vpc_security_group_ids = [aws_security_group.alvo-toast.id]
