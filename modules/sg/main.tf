@@ -19,7 +19,7 @@ resource "aws_security_group" "studioX" {
             from_port = 2049
             to_port   = 2049
             protocol  = "tcp"
-            cidr_blocks      = ["102.216.154.11/32"] //Please change to your own IP address for this to work
+            cidr_blocks      = ["196.202.217.212/32"] //Please change to your own IP address for this to work
             ipv6_cidr_blocks = ["2001:db8::/32"]
             prefix_list_ids  = []
             security_groups  = []
