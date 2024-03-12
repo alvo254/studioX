@@ -11,6 +11,10 @@ module "efs" {
   source = "./modules/efs"
 }
 
+module "s3" {
+  source = "./modules/s3"
+}
+
 module "ec2" {
   source             = "./modules/ec2"
   subnet             = module.vpc.subnet_id
