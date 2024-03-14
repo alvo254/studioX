@@ -8,3 +8,7 @@ output "subnet_id" {
 output "pub_sub2_id" {
   value = aws_subnet.studioX-pub-sub2.id
 }
+
+output "datasync_subnet" {
+  value = aws_subnet.datasync-subnet.id
+}

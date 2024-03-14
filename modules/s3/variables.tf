@@ -1,3 +1,3 @@
 variable "bucket_name" {
-    default = "studiox"
+    default = "studiox-shared-s3"
 }

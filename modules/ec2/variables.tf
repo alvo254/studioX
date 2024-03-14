@@ -13,3 +13,7 @@ variable "efs_file_system_id" {
 variable "pub_sub2_id" {
   type = string
 }
+
+variable "datasync_subnet" {
+  type = string
+}

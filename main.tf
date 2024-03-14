@@ -21,5 +21,6 @@ module "ec2" {
   security_group     = module.sg.security_group
   efs_file_system_id = module.efs.efs_id
   pub_sub2_id = module.vpc.pub_sub2_id
+  datasync_subnet = module.vpc.datasync_subnet
 
 }

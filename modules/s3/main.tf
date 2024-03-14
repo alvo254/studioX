@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "studioX" {
+resource "aws_s3_bucket" "studiox-shared" {
   bucket = var.bucket_name
   
   tags = {
@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "studioX" {
 }
 
 resource "aws_s3_bucket_public_access_block" "toast-public_access" {
-  bucket = aws_s3_bucket.studioX.id
+  bucket = aws_s3_bucket.studiox-shared.id
   
   block_public_acls       = false
   block_public_policy     = false
@@ -16,7 +16,7 @@ resource "aws_s3_bucket_public_access_block" "toast-public_access" {
 }
 
 resource "aws_s3_bucket_policy" "bucket_policy" {
-  bucket = aws_s3_bucket.studioX.id
+  bucket = aws_s3_bucket.studiox-shared.id
   policy = jsonencode({
        "Version": "2012-10-17",
        "Statement": [
