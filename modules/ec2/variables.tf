@@ -7,5 +7,13 @@ variable "security_group" {
 }
 
 variable "efs_file_system_id" {
-  
+  type = string
+}
+
+variable "pub_sub2_id" {
+  type = string
+}
+
+variable "datasync_subnet" {
+  type = string
 }
